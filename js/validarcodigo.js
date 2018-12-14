@@ -2,7 +2,15 @@ const getEditor = document.getElementById("editorcodigo")
 const btnValidar = document.getElementById("validar")
 
 console.log(btnValidar)
-btnValidar.addEventListener("click",function(e){
+
+$("textarea").keyup (function () { 
+    v = editor.getValue();
+
+    preview.open();
+    preview.writeln(v);
+    preview.close();
+ });	
+
     let valorEditor = editor.getValue()
     console.log(valorEditor)
 
@@ -45,7 +53,6 @@ btnValidar.addEventListener("click",function(e){
     //     alert("Fallo");
     // }
     
-})
 
 // $("textarea").keyup(function (e) { 
 //     let v = editor.getValue()
