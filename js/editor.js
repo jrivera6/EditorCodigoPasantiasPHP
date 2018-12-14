@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
-
-    
     var v;
     
     var preview = document.getElementById("preview").contentWindow.document;
     
-    document.body.onkeyup = function () { 
+    $("textarea").keyup (function () { 
+        v = editor.getValue();
+
         preview.open();
         preview.writeln(v);
         preview.close();
-     }	
+     });	
     
-     $("textarea").keydown(function (e) { 
-        v = editor.getValue();
-    });
+    //  $("textarea").keydown(function (e) { 
+        
+    // });
 
 });
